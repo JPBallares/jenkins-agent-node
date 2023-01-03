@@ -1,5 +1,5 @@
 FROM jenkins/agent:alpine-jdk11
-
+EXPOSE 3000
 # update the version and match the checksum
 # check https://unofficial-builds.nodejs.org/download/release/
 ENV NODE_VERSION 14.21.0
