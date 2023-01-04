@@ -12,7 +12,8 @@ USER root
 RUN addgroup -g 1001 node \
   && adduser -u 1001 -G node -s /bin/sh -D node \
   && apk add --no-cache libstdc++ \
-  && apk add --no-cache --virtual .build-deps curl
+  && apk add --no-cache --virtual .build-deps curl \
+  && apk add --no-cache make
 
 RUN set -eu; \
   curl -fsSLO --compressed "https://unofficial-builds.nodejs.org/download/release/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH-musl.tar.xz"; \
